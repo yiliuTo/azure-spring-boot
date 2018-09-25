@@ -5,54 +5,45 @@
  */
 package sample.aad.model;
 
-import com.fasterxml.jackson.annotation.*;
-
 import java.util.Objects;
+import com.microsoft.azure.spring.data.cosmosdb.core.mapping.Document;
 
-@JsonPropertyOrder({"ID", "Description", "Owner"})
+@Document
 public class TodoItem {
+    private String id;
     private String description;
-    private int id;
     private String owner;
 
-    @JsonCreator
-    public TodoItem(
-            @JsonProperty("ID") int id,
-            @JsonProperty("Description") String description,
-            @JsonProperty("Owner") String owner
-    ) {
+    public TodoItem() {
+    }
+
+    public TodoItem(String id, String description, String owner) {
         this.description = description;
         this.id = id;
         this.owner = owner;
     }
 
-    @JsonGetter("Description")
     public String getDescription() {
         return description;
     }
 
-    @JsonSetter("Description")
     public void setDescription(String description) {
         this.description = description;
     }
 
-    @JsonGetter("Owner")
     public String getOwner() {
         return owner;
     }
 
-    @JsonSetter("Owner")
     public void setOwner(String owner) {
         this.owner = owner;
     }
 
-    @JsonGetter("ID")
-    public int getID() {
+    public String getId() {
         return id;
     }
 
-    @JsonSetter("ID")
-    public void setID(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -64,10 +55,10 @@ public class TodoItem {
         if (o == null || !(o instanceof TodoItem)) {
             return false;
         }
-        final TodoItem group = (TodoItem) o;
-        return this.getDescription().equals(group.getDescription())
-                && this.getOwner().equals(group.getOwner())
-                && this.getID() == group.getID();
+        final TodoItem todoItem = (TodoItem) o;
+        return this.getDescription().equals(todoItem.getDescription())
+                && this.getOwner().equals(todoItem.getOwner())
+                && this.getId() == todoItem.getId();
     }
 
     @Override

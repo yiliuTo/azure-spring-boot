@@ -9,16 +9,16 @@ angular.module('todoApp')
 
 
         $scope.editInProgressTodo = {
-            Description: "",
-            ID: 0
+            description: "",
+            id: 0
         };
 
 
         $scope.editSwitch = function (todo) {
             todo.edit = !todo.edit;
             if (todo.edit) {
-                $scope.editInProgressTodo.Description = todo.Description;
-                $scope.editInProgressTodo.ID = todo.ID;
+                $scope.editInProgressTodo.description = todo.description;
+                $scope.editInProgressTodo.id = todo.id;
                 $scope.editingInProgress = true;
             } else {
                 $scope.editingInProgress = false;
@@ -55,8 +55,8 @@ angular.module('todoApp')
         $scope.add = function () {
 
             todoListSvc.postItem({
-                'Description': $scope.newTodoCaption,
-                'Owner': adalService.userInfo.userName
+                'description': $scope.newTodoCaption,
+                'owner': adalService.userInfo.userName
             }).success(function (results) {
                 $scope.newTodoCaption = "";
                 $scope.populate();
