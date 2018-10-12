@@ -13,8 +13,9 @@ This sample project demonstrates how to use Azure Media Services via Spring Boot
 
 ### Create Azure Media Services on Azure
 
-1. Go to [Azure portal](https://portal.azure.com/) and create the service by following this [link](https://docs.microsoft.com/en-us/azure/media-services/media-services-portal-create-account). 
-2. Mark down the `ACCOUNT NAME` and `PRIMARY KEY`.
+1. Go to [Azure portal](https://portal.azure.com/) and create the service by following this [link](https://docs.microsoft.com/en-us/azure/media-services/media-services-portal-create-account).
+2. Set up Media Service to [authenticate with Azure AD service principal](https://docs.microsoft.com/en-us/azure/media-services/previous/media-services-use-aad-auth-to-access-ams-api#service-principal-authentication) following [steps here](https://docs.microsoft.com/en-us/azure/media-services/previous/media-services-portal-get-started-with-aad#service-principal-authentication). 
+3. Save the properties: `AZURE AD TENANT`, `CLIENT ID`, `CLIENT SECRET` and `REST API ENDPOINT`.
                                                                                                                                                                                                                                                                                                
 ### Config the sample
 
