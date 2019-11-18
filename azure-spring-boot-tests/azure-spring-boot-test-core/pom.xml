@@ -11,6 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>azure-spring-boot-test-core</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
         <project.rootdir>${project.basedir}/../..</project.rootdir>
@@ -19,11 +20,15 @@
     <dependencies>
         <dependency>
             <groupId>com.microsoft.azure</groupId>
-            <artifactId>azure</artifactId>
+            <artifactId>azure-client-runtime</artifactId>
         </dependency>
         <dependency>
             <groupId>com.microsoft.azure</groupId>
-            <artifactId>azure-client-runtime</artifactId>
+            <artifactId>azure-client-authentication</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>azure</artifactId>
         </dependency>
         <dependency>
             <groupId>com.microsoft.azure</groupId>
@@ -45,6 +50,19 @@
         <dependency>
             <groupId>net.sourceforge.cobertura</groupId>
             <artifactId>cobertura</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.cverges.expect4j</groupId>
+            <artifactId>expect4j</artifactId>
         </dependency>
     </dependencies>
 
