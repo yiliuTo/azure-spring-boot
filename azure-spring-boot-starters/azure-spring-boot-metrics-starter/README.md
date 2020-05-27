@@ -1,3 +1,11 @@
+## Java agent based monitoring
+
+Azure Application Insights has released one Java agent that can be used to capture metrics inside JVM. Consider use the Java agent based approach. 
+
+Refer following document for more details:
+
+https://docs.microsoft.com/en-us/azure/azure-monitor/app/java-in-process-agent
+
 ## Usage
 
 ### Add the dependency
@@ -9,7 +17,7 @@ If you are using Maven, add the following dependency.
 <dependency>
     <groupId>com.microsoft.azure</groupId>
    <artifactId>azure-spring-boot-metrics-starter</artifactId>
-    <version>2.2.0</version>
+    <version>2.3.0</version>
 </dependency>
 ```
 
